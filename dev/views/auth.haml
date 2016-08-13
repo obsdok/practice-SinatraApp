@@ -1,0 +1,31 @@
+.container-fluid
+    .row
+
+        .col-md-6
+            .panel.panel-default
+                .panel-heading Регистрация
+                .panel-body
+                    %form{ :method => 'post', :action => '/auth/registration'}
+                        .form-group
+                            %label{ :for => "email" } Email address
+                            %input#email.form-control{ :type => "email", :placeholder => "Email", :name => 'email' }
+                        .form-group
+                            %label{ :for => "login" } login
+                            %input#login.form-control{ :type => "text", :placeholder => "Login", :name => 'login' }
+                        .form-group
+                            %label{ :for => "pass" } Password
+                            %input#pass.form-control{ :type => "password", :placeholder => "Password",:name => 'password' }
+                        %button.btn.btn-default{ :type => "submit" } Submit
+
+        .col-md-6
+            .panel.panel-default
+                .panel-heading Авторизация
+                .panel-body
+                    %form{ :method => 'post', :action => '/auth/registration'}
+                        .form-group
+                            %label{ :for => "login" } login
+                            %input#login.form-control{ :type => "text", :placeholder => "Login", :name => 'login' }
+                        .form-group
+                            %label{ :for => "pass" } Password
+                            %input#pass.form-control{ :type => "password", :placeholder => "Password", :name => 'password' }
+                        %button.btn.btn-default{ :type => "submit" } Submit

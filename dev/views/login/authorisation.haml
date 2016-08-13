@@ -1,0 +1,14 @@
+.container-fluid
+    .row
+        .col-md-12
+            .panel.panel-default
+                .panel-heading Авторизация
+                .panel-body
+                    %form{ :method => 'post', :action => '/auth/registration'}
+                        .form-group
+                            %label{ :for => "login" } login
+                            %input#login.form-control{ :type => "text", :placeholder => "Login", :name => 'login' }
+                        .form-group
+                            %label{ :for => "pass" } Password
+                            %input#pass.form-control{ :type => "password", :placeholder => "Password", :name => 'password' }
+                        %button.btn.btn-default{ :type => "submit" } Submit
