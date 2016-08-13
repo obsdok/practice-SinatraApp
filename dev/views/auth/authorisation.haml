@@ -4,7 +4,7 @@
             .panel.panel-default
                 .panel-heading Авторизация
                 .panel-body
-                    %form{ :method => 'post', :action => '/auth/registration'}
+                    %form{ :method => 'post', :action => '/auth/authorisation'}
                         .form-group
                             %label{ :for => "login" } login
                             %input#login.form-control{ :type => "text", :placeholder => "Login", :name => 'login' }

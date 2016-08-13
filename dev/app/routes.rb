@@ -1,32 +1,30 @@
 get '/' do
-    haml :index
+    require './app/controllers/IndexController'
+    show
 end
 
 get '/auth/?' do
-    if auth?
-        redirect to('/')
-    end
-    haml :auth
+    require './app/controllers/AuthController'
+    show
 end
 
 ['/auth/registration/?', '/auth/authorisation/?'].each do |path|
+    
     get path do
         redirect to('/auth')
     end
-end
 
-post '/auth/registration/?' do
-    if registration? params
-        redirect to('/')
-    end
-    haml :'login/registration'
-end
+    post path do
+        require './app/controllers/AuthController'
 
-post '/auth/authorisation/?' do
-    if authorisation? params
-        redirect to('/')
+        case path
+        when /authorisation/
+            showAuthorisation
+        when /registration/
+            showRegistration
+        end
     end
-    haml :'login/authorisation'
+
 end
 
 get '/profile' do

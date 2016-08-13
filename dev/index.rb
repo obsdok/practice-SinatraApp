@@ -5,4 +5,6 @@ set :session_secret, 'super secret'
 set :sessions, :expire_after => 2592000
 set :session_store, Rack::Session::Pool
 
-%w( ./app/helpers ./app/routes).each  { |l| require l}
+%w( ./lib/Connect ./lib/User ./app/routes ).each  { |l| require l}
+
+Connect.new

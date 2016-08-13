@@ -10,10 +10,12 @@ class Connect
         end
 
         def user
+            self.new unless @connect
             @connect[:user]
         end
 
         def post
+            self.new unless @connect
             @connect[:post]
         end
 
