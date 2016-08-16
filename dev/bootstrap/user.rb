@@ -1,11 +1,3 @@
-helpers do
-
-    def auth?
-        @user = User.new( Connect.user )
-    end
-
-end
-
 class User
 
     @connect = false

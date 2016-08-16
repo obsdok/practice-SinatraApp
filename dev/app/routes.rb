@@ -1,5 +1,6 @@
 get '/' do
     require './app/controllers/IndexController'
+    p @user
     show
 end
 
@@ -9,7 +10,7 @@ get '/auth/?' do
 end
 
 ['/auth/registration/?', '/auth/authorisation/?'].each do |path|
-    
+
     get path do
         redirect to('/auth')
     end
@@ -28,9 +29,5 @@ end
 end
 
 get '/profile' do
-
-end
-
-get '/blog/:slug' do
 
 end
