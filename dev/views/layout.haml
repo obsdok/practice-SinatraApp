@@ -29,7 +29,7 @@
                             %a{:href => '#'} Link
                     %ul.nav.navbar-nav.navbar-right
                         %li
-                            - if @user.login
+                            - if @login
                                 %a{ :href => "/profile" } Profile
                             - else
                                 %a{ :href => "/auth" } Sign In

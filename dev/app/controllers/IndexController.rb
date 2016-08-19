@@ -1,7 +1,7 @@
 helpers do
 
     def show
-        bootstap
+        userAuth?
         haml :index
     end
 

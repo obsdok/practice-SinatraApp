@@ -1,6 +1,5 @@
 get '/' do
     require './app/controllers/IndexController'
-    p @user
     show
 end
 
